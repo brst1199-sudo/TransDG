@@ -1,0 +1,319 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a2a3a; /* Dark blue background from the image */
+    color: white;
+}
+
+/* Header */
+header {
+    padding: 20px 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.btn-orange { background-color: #d35400; }
+.btn-blue { background-color: #2980b9; }
+
+.btn:hover { opacity: 0.8; }
+
+/* Services Grid */
+.services-container {
+    padding: 60px 5%;
+    background-color: #1a2a3a;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    width: 200px;
+    text-align: center;
+}
+
+.service-card {
+    background-color: #2c3e50;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+    border: 1px solid #3e5871;
+    
+    /* This makes the mouse turn into a hand for the whole box */
+    cursor: pointer; 
+}
+
+/* This ensures the text and icons inside don't "override" the pointer */
+.service-card * {
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    padding: 40px;
+    border-top: 1px solid #333;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-grid { flex-direction: column; }
+    .contact-info { flex-direction: column; align-items: center; gap: 10px; }
+}
+
+/* Navigation Buttons Styling */
+.nav-buttons {
+    display: flex;
+    list-style: none;
+}
+
+.nav-buttons li {
+    margin-left: 15px;
+}
+
+.nav-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    border-radius: 5px; /* Slightly rounded edges */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-btn:hover {
+    background-color: white;
+    color: #1a2a3a; /* Swaps colors on hover */
+    transform: translateY(-2px);
+}
+
+/* Service Page Specifics */
+.service-page {
+    background-color: #2c3e50; /* Slightly darker for focus */
+}
+
+.internal-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    align-items: center;
+}
+
+.service-hero {
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    padding: 0 10%;
+    gap: 50px;
+}
+
+.service-text {
+    flex: 1;
+}
+
+.category-tag {
+    color: #d35400;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.service-text h1 {
+    font-size: 3.5rem;
+    margin: 10px 0 20px;
+}
+
+.service-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.feature-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+.service-image {
+    flex: 1;
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Mobile View */
+@media (max-width: 900px) {
+    .service-hero {
+        flex-direction: column;
+        padding-top: 50px;
+        text-align: center;
+    }
+    .feature-list {
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+.card-link {
+    text-decoration: none; /* Removes underline */
+    color: inherit;        /* Keeps the text white/white-ish */
+    display: block;        /* Makes sure the link takes up the full space */
+}
+
+/* Features Section Styling */
+.features-section {
+    padding: 80px 10%;
+    background-color: #1a2a3a;
+    text-align: center; /* Centers the main title */
+}
+
+.features-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+/* Optional: Adds a small orange line under the title for extra flair */
+.features-main-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #d35400;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left; /* Keeps the descriptions left-aligned for readability */
+}
+
+.feature-item {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03); /* Very subtle box effect */
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.feature-item h3 {
+    color: #d35400;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.feature-item p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
