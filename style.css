@@ -289,8 +289,9 @@ footer {
 
 .features-grid {
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     text-align: left; /* Keeps the descriptions left-aligned for readability */
 }
 
